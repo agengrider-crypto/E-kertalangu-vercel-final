@@ -1,0 +1,143 @@
+{
+  "theme_strategy": {
+    "primary_mode": "system",
+    "description": "E-Kertalangu requires a sophisticated Light/Dark mode toggle to cater to all lighting conditions, from daytime outdoor activities in Kertalangu to evening religious gatherings. The design rejects the generic purple-white tech aesthetic, opting for an organic, deep, earthy palette infused with Gen-Z minimalism."
+  },
+  "colors": {
+    "archetype": "Organic & Earthy with a Gen-Z Brutalist edge",
+    "palette": {
+      "light": {
+        "background": "#F7F5F0",
+        "surface": "#FFFFFF",
+        "foreground": "#0A1F13",
+        "primary": "#114232",
+        "primary_foreground": "#F7F5F0",
+        "accent": "#D96C4A",
+        "accent_foreground": "#FFFFFF",
+        "muted": "#EBE8DF",
+        "muted_foreground": "#5C7365",
+        "border": "#E0DDD5",
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "danger": "#EF4444"
+      },
+      "dark": {
+        "background": "#07130B",
+        "surface": "#0C1F13",
+        "foreground": "#EAE7DF",
+        "primary": "#87A985",
+        "primary_foreground": "#07130B",
+        "accent": "#E07A5F",
+        "accent_foreground": "#07130B",
+        "muted": "#163121",
+        "muted_foreground": "#8F9E94",
+        "border": "#1A3825",
+        "success": "#10B981",
+        "warning": "#FBBF24",
+        "danger": "#F87171"
+      }
+    },
+    "guidelines": "Use the success color (#10B981) specifically for 'Hadir' status in attendance as requested. Secret tagging should use subtle border glowing effects with the accent color. Do not use pure black or pure white; always tint with the earthy green base."
+  },
+  "typography": {
+    "headings": {
+      "family": "'Cabinet Grotesk', sans-serif",
+      "weights": ["800 (Black)", "300 (Light)"],
+      "usage": "Use tight letter-spacing (tracking-tight) for large headers. Radical weight contrast."
+    },
+    "body": {
+      "family": "'Satoshi', sans-serif",
+      "weights": ["400 (Regular)", "500 (Medium)", "700 (Bold)"],
+      "usage": "Clean, highly readable geometric sans for dense tables and forms."
+    },
+    "mono": {
+      "family": "'JetBrains Mono', monospace",
+      "usage": "For QR Code IDs, participant tags, and timestamps."
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-none",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight",
+      "h3": "text-xl sm:text-2xl",
+      "body": "text-base leading-relaxed",
+      "labels": "text-xs tracking-[0.2em] uppercase font-bold text-muted-foreground"
+    }
+  },
+  "layouts": {
+    "general": "Generous spacing. Use p-6, p-8, p-12 for containers. Bordered items MUST have internal padding.",
+    "dashboard_grid": "High Density Grid for Admin/Pengurus dashboards (grid-cols-1 md:grid-cols-3 lg:grid-cols-4). Tight gaps (gap-4 or gap-6). Use h-full to stretch children.",
+    "bento_grid": "For Peserta view (participant self-service), use a Tetris/Bento layout (grid-cols-1 md:grid-cols-8) to make personal info, QR code, and recent attendance feel like a modern poster.",
+    "navigation": "Sticky sidebar for desktop Admin, sticky bottom floating nav with crystal glassmorphism for mobile Peserta view."
+  },
+  "visual_enhancers": {
+    "surfaces": "Mix Flat Solid surfaces with 1px borders for functional dashboard areas. Use Neumorphism (Clay & Crisp) selectively for main action buttons (like QR Scan).",
+    "glassmorphism": "Use 'Optical Clarity' glassmorphism (backdrop-blur-xl bg-background/70 with 1px subtle inner stroke) only for floating navigation and sticky headers.",
+    "shadows": "Soft, diffused ambient shadows for cards. Deep shadows for floating action buttons (FAB).",
+    "textures": "Subtle noise overlay on the hero or login background to break digital flatness and give a raw, authentic Gen-Z vibe.",
+    "qr_code": "Display QR codes inside a card with rounded-3xl corners, plenty of white space padding, and a subtle pattern behind the card."
+  },
+  "components": {
+    "buttons": "Pill-shaped (rounded-full) for primary actions, sharp or slightly rounded (rounded-lg) for secondary data actions. Interaction animations (scale-95 on active) are mandatory.",
+    "inputs": "Large hit areas (h-12 or h-14). 1px border. Focus states must have ring-2 ring-primary offset-2.",
+    "cards": "Subtle roundness (max 12px border-radius). Use 1px solid stroke instead of heavy drop shadows.",
+    "tables": "Shadcn UI tables. Sticky headers. Row hover state should slightly shift background color and reveal quick action icons.",
+    "modals": "Use Shadcn Dialog. Backdrop must blur the background (backdrop-blur-sm).",
+    "charts": "Recharts for attendance history. Use the earthy palette. Remove grid lines for a cleaner, minimalist look.",
+    "toast": "Use Sonner for notifications (e.g., successful QR scan, WhatsApp sent, autosave). Position bottom-center for mobile, bottom-right for desktop.",
+    "dropdowns": "Shadcn Select. DO NOT use transparent backgrounds."
+  },
+  "motion": {
+    "page_transitions": "Framer Motion for soft fade and slide-up (y: 10, opacity: 0 to y: 0, opacity: 1) on page mount.",
+    "hover_states": "All interactive elements must respond on hover. Buttons should slightly lift (-translate-y-0.5) with customized transitions (transition-transform 0.2s ease).",
+    "lists": "Staggered entrance animations for activity logs and participant lists."
+  },
+  "specific_features": {
+    "attendance_status": "Hadir: bg-success/10 text-success border border-success/20. Izin: warning. Alpha: danger.",
+    "quick_search": "Sticky search bar at the top of lists. Trigger with Cmd/Ctrl + K.",
+    "time_picker": "Dropdowns constrained to 10-minute increments. Add WITA timezone label clearly next to it.",
+    "whatsapp_sender": "Modal presenting predefined pills (Rekap Harian, Mingguan, dll) for quick selection before redirecting to wa.me.",
+    "secret_tagging": "Small glowing dot or dashed-border badge that is visually distinct but doesn't shout 'SECRET'.",
+    "musyawarah_editor": "Rich text area with a subtle 'Autosaving...' indicator in the top right corner. Use sonner for 'Saved' toast.",
+    "gps_picker": "Minimalist map integration. The container must have rounded corners and overflow-hidden."
+  },
+  "accessibility": {
+    "contrast": "Ensure 4.5:1 ratio for text. Focus states are mandatory (ring).",
+    "motion": "Respect prefers-reduced-motion.",
+    "data_testid": "Add data-testid to all core interactive elements (e.g., qr-scanner-btn, participant-search-input, wa-template-btn)."
+  },
+  "media": {
+    "icons": "Use lucide-react for all standard icons. Consider @phosphor-icons/react (Duotone) if a more premium look is desired.",
+    "image_urls": {
+      "login_background": {
+        "url": "https://images.pexels.com/photos/36232116/pexels-photo-36232116.jpeg",
+        "description": "Interior view of a modern mosque featuring unique geometric patterns and arches. Use as a split-screen background for the desktop login page with a heavy overlay.",
+        "category": "background"
+      },
+      "hero_texture": {
+        "url": "https://images.pexels.com/photos/4863013/pexels-photo-4863013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Detailed close-up of dark green fabric. Use as a masked texture for dark mode headers or cards.",
+        "category": "texture"
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the color palette. Avoid default Tailwind blues/purples.",
+    "Implement the font pairs (Cabinet Grotesk + Satoshi) using @fontsource or Google Fonts.",
+    "Ensure all Shadcn components are modified to reflect the earthy, brutalist Gen-Z vibe (adjust border radiuses, remove standard drop shadows for 1px borders).",
+    "Use grid-cols-1 on mobile for everything, scaling to bento or dense grids on desktop.",
+    "Build the dashboard-heavy Admin views emphasizing data density, but keep the Peserta (Jamaah) view extremely simple and card-based.",
+    "For the QR code generator, ensure the output has a clean, high-contrast white background so it scans reliably, even in dark mode.",
+    "Ensure the Activity Management time dropdowns explicitly snap to 10-minute intervals.",
+    "Add 'WITA' text indicator next to time inputs to prevent timezone confusion.",
+    "WhatsApp templates must format the message properly with URL encoding before opening wa.me."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not converge toward generic AI outputs. Avoid uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy, but prefer sharp 1px borders over blurry shadows for this specific archetype.",
+    "DO NOT apply universal transition (transition: all). Use specific transitions.",
+    "DO NOT center align the app container (.App { text-align: center; }).",
+    "Every interaction needs micro-animations - hover states, transitions.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Never use AI assistant Emoji characters for icons.",
+    "Use Sonner for toasts."
+  ]
+}

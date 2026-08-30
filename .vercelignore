@@ -1,0 +1,16 @@
+.git
+.emergent
+memory
+tests
+test_reports
+backend/tests
+backend/pytest.ini
+backend/__pycache__
+backend/.env
+backend/requirements.txt
+backend_test.py
+test_result.md
+design_guidelines.json
+frontend/node_modules
+frontend/build
+frontend/.env
