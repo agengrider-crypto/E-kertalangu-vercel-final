@@ -152,4 +152,10 @@ const configureDevServer = webpackConfig.devServer;
 webpackConfig.devServer = (devServerConfig) =>
   makeDevServerV5Compatible(configureDevServer(devServerConfig));
 
+webpackConfig.eslint = {
+  enable: false
+};
+
+module.exports = webpackConfig;
+
 module.exports = webpackConfig;
